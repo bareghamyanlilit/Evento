@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-gray-900 text-white">
+      <body className="bg-gray-900 text-white overflow-y-scroll">
         <Container>
           <Header />
           {children}
