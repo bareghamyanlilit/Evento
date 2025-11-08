@@ -20,16 +20,14 @@ export default function EventCard({ event }: EventCardProps) {
 
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
-  
+
   return (
     <MotionLink
       ref={ref}
       className="flex-1 basis-80 h-[380px] max-w-[500px]"
       href={`/event/${event.slug}`}
       style={{
-        //@ts-ignore
         scale: scaleProgress,
-        //@ts-ignore
         opacity: opacityProgress,
       }}
       initial={{
